@@ -15,13 +15,13 @@ route.post("/", [isValidUser], async (request, response) => {
   const userRechrche = await User.find({ email: body.email });
 
   if (userRechrche.length > 0)
-    return reponse.status(400).json({ msg: "email déjà pris" });
+    return response.status(400).json({ msg: "email déjà pris" });
   // cyptage de mdp
 
   const salt = await genSalt(10);
-  const passwordHashe = await hash(body.password, salt);
+  const passwordHashe = await hash(body.motDePasse, salt);
 
-  const userACreer = new User({ ...body, password: passwordHashe });
+  const userACreer = new User({ ...body, motDePasse: passwordHashe });
 
   await userACreer.save();
 

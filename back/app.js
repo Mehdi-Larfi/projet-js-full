@@ -3,13 +3,10 @@ const routeOeuvre = require("./oeuvres-musee");
 const routeUser = require("./users");
 const routeConnexion = require("./connexion")
 const { connect } = require("mongoose");
-require("dotenv").config;
+require("dotenv").config();
 console.log("ligne 6");
 
-const URI =
-  process.env.NODE_ENV === "production"
-    ? process.env.BDD_PROD
-    : process.env.BDD_DEV;
+const URI = process.env.BDD_PROD;
 
 console.log("ligne 13");
 

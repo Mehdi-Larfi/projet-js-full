@@ -6,7 +6,7 @@ const { idValid, isValidOeuvre, autorisation, isAdmin } = require("./middleware"
 
 const route = Router();
 
-route.post("/", [isValidOeuvre, autorisation], async (request, response) => {
+route.post("/", [isValidOeuvre], async (request, response) => {
   const { body } = request;
   const nouvelleOeuvre = new Oeuvre({ ...body });
 
@@ -22,7 +22,7 @@ route.post("/", [isValidOeuvre, autorisation], async (request, response) => {
   response.json(nouvelleOeuvre);
 });
 
-route.get("/all", idValid, async (request, response) => {
+route.get("/all", async (request, response) => {
   const toutesLesOeuvres = await Oeuvre.find().populate(
     "image",
     "nom auteur description dtCreation"

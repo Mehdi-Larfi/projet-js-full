@@ -18,7 +18,7 @@ route.post("/login", [isValidConnect], async (request, response) => {
 
   console.log("post");
 
-  const verif = await compare(body.password, userSearch.password);
+  const verif = await compare(body.motDePasse, userSearch.motDePasse);
   if (!verif)
     return response
       .status(404)

@@ -1,0 +1,17 @@
+  body: {
+    email: 'abc@gmail.com',
+    motDePasse: 'aefG56sfcd-',
+    role: 'redacteur'
+  }
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRhNDA0YmI2MGY3YTA3ODAzOTVjYTYiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJyb2xlIjoicmVkYWN0ZXVyIiwiaWF0IjoxNjgyNTg4ODcyfQ.su5OAhgF-CIs_o7YPvzMYbZGYVYyr8DgQ5VHegKoa-o"
+  
+BDD_DEV = "mongodb+srv://doranco:0YgITbN0aS2ydXmZ@cluster0.dotszew.mongodb.net/dev"
+
+{
+
+  "nom": "picture",
+  "description": "image incroyable montrant toutes les possibilités qu'offrent la géométrie",
+  "image": { "data": "uri", "typeContenu": "https://placehold.co/400x200"} ,
+  "auteur": "abc, Artiste mondial",
+  "dtCreation": "2023-04-27"
+}

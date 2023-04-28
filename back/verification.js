@@ -3,8 +3,9 @@ const Joi = require("joi");
 const schemaJoiOeuvre = Joi.object({
   nom: Joi.string().min(5).max(255).required(),
   description: Joi.string().min(5).max(10000).required(),
+  image: Joi.string().min(5).max(600).required(),
   auteur: Joi.string().min(5).max(255).required(),
-  dt_creation: Joi.date().required(),
+  dtCreation: Joi.date().required(),
 });
 
 const schemaJoiUser = Joi.object({

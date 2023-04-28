@@ -4,7 +4,7 @@ const oeuvreSchema = new Schema({
 
   nom: String,
   description: String,
-  image: { data: Buffer, typeContenu: String },
+  image:  String,
   auteur: String,
   dtCreation: Date,
 });
